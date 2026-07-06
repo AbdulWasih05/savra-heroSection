@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-nav: 980px;
+
+  --font-poppins: var(--font-poppins), "Poppins", system-ui, sans-serif;
+  --font-dm-sans: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+
+  --color-savra-bg: #efeaf7;
+  --color-savra-ink: #1a1533;
+  --color-savra-ink-2: #3b3556;
+  --color-savra-muted: #4a4463;
+  --color-savra-dark: #141024;
+  --color-savra-black: #0f0b1f;
+  --color-savra-purple: #6d4ae0;
+  --color-savra-purple-soft: #9b7bff;
+  --color-savra-purple-glow: #c4b0ff;
+  --color-savra-logo: #a99ad9;
+  --color-savra-navbar: #2e2a2e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font-dm-sans);
+}
+
+::selection {
+  background: #6d4ae0;
+  color: #fff;
+}
+
+/* Hero responsive tuning, ported from the source design */
+@media (max-width: 720px) {
+  .savra-h-line1 .savra-accent {
+    text-shadow: 2px 2px 0 #c4b0ff !important;
+  }
+  .savra-h-line2 {
+    text-shadow: 3px 3px 0 #c4b0ff, 6px 6px 0 rgba(196, 176, 255, 0.35) !important;
+  }
+  .savra-hero {
+    justify-content: center !important;
+  }
+  .savra-hero-inner {
+    gap: 14px !important;
+  }
+  .savra-hero-inner > h1 {
+    margin-bottom: 2px !important;
+  }
+  .savra-hero-inner > a {
+    margin-top: 10px !important;
+  }
+  .savra-card {
+    width: 96px !important;
+  }
+  .savra-card-lbl {
+    display: none !important;
+  }
+  .savra-card-tl {
+    top: 9% !important;
+    left: -8% !important;
+  }
+  .savra-card-tr {
+    top: 15% !important;
+    right: -8% !important;
+  }
+  .savra-card-bl {
+    bottom: 8% !important;
+    left: -8% !important;
+  }
+  .savra-card-br {
+    bottom: 5% !important;
+    right: -8% !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .savra-h-line1 {
+    white-space: normal !important;
+  }
+  .savra-card {
+    width: 80px !important;
+  }
+}
